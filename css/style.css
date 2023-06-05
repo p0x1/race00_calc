@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.calculator {
+    margin: 0 auto;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.calculator .input{
+    color: lawngreen;
+    text-align: right;
+    background-color: black;
+    grid-column: 1 / span 5;
+    height: 100px;
+}
+
+.calculator .result{
+    color: lawngreen;
+    text-align: right;
+    background-color: black;
+    grid-column: 1 / span 5;
+    height: 100px;
+}
+
+
+.calculator input[type="button"] {
+    color: lawngreen;
+    background-color: black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.calculator input[value='Copy result']{
+    grid-column-start: span 5;
+}
+
+.calculator input[value='Converter']{
+    grid-column-start: span 5;
+}
+
+.converter-menu {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    transition: top 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.buttons{
+    margin-left: calc(100vh - 150px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 310px;
+    border-radius: 5px;
+}
+
+.converter-menu input{
+    padding: 10px;
+    color: lawngreen;
+    background-color: black;
+}
